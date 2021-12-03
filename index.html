@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Picker</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/font-awesome/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Righteous&display=swap" rel="stylesheet"> 
+	</head>
+	
+	<body>
+	<style>
+	body{
+background-color: #f4d2d2;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+overflow:hidden;
+	}
+	.body-night{
+	    background-color: #005171;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.05'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+	}
+	.body-day{
+	  background-color: #f4d2d2;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");}
+	.canvas-wrap{
+	overflow:hidden;
+	}
+	.canvas{
+	background:#fff;
+	height:450px;
+	overflow:hidden;
+	padding:5px;
+	background-image:url('sky.jpg') !important;
+		background-size:cover;
+		background-position:center;
+	width:100%;
+	position:relative;
+	border-radius:10px;
+	box-shadow:0 2px 4px rgba(0,0,0,0.3);
+	transition:0.5s ease-in-out;
+	}
+	.next,.next i{
+	color:#fff;
+	}
+	.next i{
+	margin-top:5px;
+	}
+	.access{
+	transform:translateX(-100%);
+	transform:translateY(-100%);
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg fill-opacity='0.03'%3E%3Ccircle fill='%23ffffff' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23f8d2c8' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23eba593' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23d97861' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23c34a31' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23a90000' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+	
+	}
+	.form-wrap{
+	text-align:center;
+	width:80%;
+	}
+	.logo{
+	 width:180px;
+	 height:80px;
+	background-image:url('WinnerCart.png');
+	background-position:center;
+	background-size:cover;
+	margin:0 auto;
+	margin-bottom:20px;
+	}
+	.close-game .logo{
+	    float:right;
+	    margin-right:43px;
+	}
+	.canvas{
+	background:#fff;
+	background-position:center;
+	background-size:cover;
+	position:relative;
+	padding-right:0;
+	}
+	
+	#container{
+	background:#f1f1f1;
+	display:flex;
+	justify-content:center;
+	height:150px;
+	align-items:center;
+	flex-direction:column;
+	z-index:8;
+	position:absolute;
+	width:98%;
+	left:0;
+	right:0;
+	margin:0 auto;
+	border-radius:10px;
+	}
+	.dragitem{
+		display:block;
+		height:90px;
+		width:90px;
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		margin:0 auto;
+		margin-left:20px;
+		margin-bottom:20px;
+		color:#fff;
+		background-image:url('cart90.png');
+		background-size:cover;
+		background-position:center;
+		z-index:9;
+	}
+	.change-direction{
+	transform:rotateY(180deg);
+	}
+	.hit-wall-left{
+	transform:rotate(20deg) rotateY(180deg);
+	}
+	.hit-wall-right{
+	transform:rotate(-20deg) rotateY(0deg);
+	}
+	
+	.celebrate{
+	    height:130px;
+		width:130px;
+		position:absolute;
+		border-radius:50%;
+		bottom:0;
+		opacity:0;
+		left:0;
+		right:0;
+		margin:0 auto;
+		margin-left:0px;
+	   margin-bottom:5px;
+		background:#fff;
+		z-index:9;
+		border:4px dotted #a90000;
+		animation: celebrate 0.3s infinite alternate;
+		color:#a90000;
+	}
+	.opacity{
+	    opacity:1;
+	}
+	@keyframes celebrate{
+	0%,20%{
+	transform:rotate(90deg);
+	}50%,100%{
+	transform:scale(360deg);
+	}
+	}
+	
+	
+	.close-game{
+	 position:absolute;
+	 width:98%;
+	 height:98%;
+	 border-radius:10px;
+	 z-index:90;
+	 background:#a90000;
+	 background-position:center;
+	   background-size:cover;
+	 left:0;
+	 right:0;
+	 margin:0 auto;
+	 display:flex;
+	 flex-direction:column;
+	 justify-content:center;
+	 align-items:center;
+	 font-weight:bold;
+	 color:#fff;
+	}
+	.start-game-wrap{
+	    background-image:url('DesktopWcart.jpg');
+	    position:absolute;
+	    width:98%;
+	 height:98%;
+	 border-radius:10px;
+	 z-index:95;
+	 background-position:center;
+	   background-size:cover;
+	 left:0;
+	 right:0;
+	 margin:0 auto;
+	}
+	
+	.play-wrap{
+	    width:200px;
+	    float:right;
+	    margin-right:50px;
+	    margin-top:150px;
+	    min-height:100px;
+	}
+	
+	.game-scores{
+		bottom:0;
+		right:0;
+		width:100%;
+		height:53px;
+		color:#666;
+		background:#ED544A;
+		font-weight:bold;
+		padding:15px;
+		padding-top:5px;
+		margin-top:10px;
+		padding-bottom:20px;
+		box-shadow:0 2px 4px rgba(0,0,0,0.3);
+		border-radius:10px;
+	}
+	.life,.total-scores{
+	height:40px;
+	min-width:40px;
+	font-size:20px;
+	background:#fff;
+	color:#ccc;
+	}
+	.life{
+	color:green;
+	}
+	.points{
+	display:none;
+	z-index:900;
+	}
+	.game-scores i, .sound-wrap-i{
+		font-size:20px;
+		color:#fff;
+		display:inline-block;
+		box-shadow:0 2px 4px rgba(0,0,0,0.4);
+		padding:3px;
+		padding-top:5px;
+		border-radius:50%;
+		margin-right:5px;
+		margin-left:5px;
+	}
+	.sound-wrap-i{
+	background:#ed544a;
+	}
+	.btn{
+	box-shadow:0 2px 4px rgba(0,0,0,0.4);
+	background:#0048ba;
+	border:1px solid #0048ba;
+	}
+	.sound{
+	cursor:pointer;
+	margin-top:10px;
+	}
+	.sound:hover{
+	font-size:22px;
+	color:#666;
+	}
+	.btn:hover,.btn:focus{
+	background:#0048ba;
+	outline:none !important;
+	border:none !important;
+	}
+	.layer{
+	position:relative;
+	height:30px;
+	width:99%;
+	background:#F5B029;
+	transform-origin:bottom;
+	transform-style:preserve-3d;
+	transform: perspective(30px) rotateX(17deg);
+	margin-top:30px;
+	}
+	.layer:nth-child(1){
+	margin-top:0px;
+	}
+	.layer:after{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:10px;
+	background:rgba(245, 176, 41,0.5);
+	bottom:-10px;
+	transform-origin:top;
+	transform: perspective(40px) rotateX(-10deg);
+	}
+	.shadow{
+	position:absolute;
+	bottom:-15px;
+	left:48%;
+	width:100%;
+	transform:translateX(-40%);
+	height:5px;
+	background:linear-gradient(rgba(0,0,0,0.20), transparent);
+	}
+	.product-wrap{
+		width:75%;
+		height:40px;
+		position:absolute;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		padding-top:10px;
+		top:0;
+		margin-top:15px;
+		-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, transparent, #000);
+	}
+	
+	.store-floor{
+	position:relative;
+	height:200px;
+	width:99%;
+	left:0;
+	right:0;
+	margin:0 auto;
+	background:#fff;
+	transform-origin:bottom;
+	transform-style:preserve-3d;
+	transform: perspective(30px) rotateX(17deg);
+	margin-top:80px;
+	position:absolute;
+	bottom:13;
+	opacity:0.2;
+	}
+	.store-floor:after{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:10px;
+	background:rgba(102,102,102,0.8);
+	bottom:-10px;
+	transform-origin:top;
+	transform: perspective(40px) rotateX(-10deg);
+	}
+	.second-bar{
+		margin-top:75px;
+	}
+	.product-wrap-inner{
+	position:relative;
+	width:100%;
+	height:100%;
+	}
+	.wall{
+	position:absolute;;
+	width:33%;
+	height:400px;
+	background:#fff;
+	right:0;
+	left:0;
+	top:10;
+	margin:0 auto;
+	z-index:2;
+	background:rgba(0,0,0,0);
+	}
+	.product{
+		width:40px;
+		height:30px;
+		position:absolute;
+		background:rgba(0,0,0,0);
+        z-index:6;
+	}
+	.product img{
+	  height:100%;
+	  max-width:100%;
+	 object-fit:cover;
+	}
+	.product:nth-child(2){
+	margin-left:28%;
+	}
+	.product:nth-child(3){
+	margin-left:55%;
+	}
+	.product:nth-child(4){
+	margin-left:86%;
+	}
+	
+	.pop{
+	display:block;
+	transform:scale(0);
+	animation: pop 1s normal forwards ease-in-out;
+	}
+
+	.play{
+	width:150px;
+	height:45px;
+	background-image:url('Start-Game.png');
+	background-position:center;
+	background-size:cover;
+	margin:0 auto;
+	cursor:pointer;
+	animation: pulse 0.4s infinite alternate;
+	}
+	@keyframes pop{
+	0%,20%{
+	transform:scale(0.3);s
+	}50%,100%{
+	transform:scale(1);
+	}
+	}
+	
+	.play-game span{
+	    display:block;
+	}
+	.leader-board{
+	background:#a90000;
+	display:none;
+	color:#fff;
+	}
+	
+	.leader-board:hover{
+	color:#fff;
+	}
+	.slant{
+	transform:rotate(-15deg);
+	}
+	
+	@keyframes pulse{
+	0%,20%{
+	transform:scale(1);
+	}50%,100%{
+	transform:scale(1.2);
+	}
+	}
+	.score-board{
+	z-index:5;
+	position:absolute;
+	width:50px;
+	overflow:hidden;
+	right:0;
+	margin-top:170px;
+	margin-right:5px;
+	padding:5px;
+	box-shadow:0 2px 4px rgba(0,0,0,0.4);
+	border-radius:10px;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	padding-top:20px;
+	color:#fff;
+	}
+	.score-board p{
+	background:#a90000;
+	padding-top:4px;
+	width:100%;
+	}
+	.score-board span{
+	margin-top:4px;
+	}
+	.sound-wrap{
+	  height:30px;
+	  width:30px;
+	  background:rgba(0,0,0,0) !important;
+	}
+	
+	@media only screen and (max-width:769px){
+	.canvas-wrap{
+		padding:10px;
+	}
+	
+
+	.start-game-wrap{
+	    background-image:url('MobWcart.jpg');
+	    
+	}
+	.play-wrap{
+	    width:200px;
+	    position:absolute;
+	    top:0;
+	    left:0;
+	    right:0;
+	    margin:0 auto;
+	    margin-top:50px;
+	    min-height:200px;
+	}
+		.dragitem{
+		    height:75px;
+		width:75px;
+		background-image:url('cart75.png');
+	}
+	.celebrate{
+	    height:120px;
+		width:120px;
+	}
+	}
+	@media only screen and (max-width:360px){
+		.dragitem{
+		    height:75px;
+		width:65px;
+		background-image:url('cart75.png');
+	}
+	.celebrate{
+	    height:120px;
+		width:120px;
+	}
+	}
+	
+	.ready{
+	position:absolute;
+	width:50px;
+	height:50px;
+	color:#a90000;
+	background:#fff;
+	text-align:center;
+	padding:10px;
+	font-weight:bold;
+	font-size:20px;
+	top:0;
+	left:0;
+	right:0;
+	margin:0 auto;
+	margin-top:50%;
+	border-radius:50%;
+	z-index:8;
+	
+	}
+	.pulse-ready{
+	transform:scale(1.5);
+	}
+	.message-box{
+	display:none;
+	}
+	.alert{
+	background:red;
+	font-weight:bold;
+	color:#fff;
+	width:70%;
+	min-height:20px;
+	display:block;
+	margin:0 auto;
+	margin-bottom:10px;
+	}
+	.loading{
+	position:absolute;
+	height:100%;
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:45px;
+	text-align:center;
+	padding-top:7px;
+	display:none;
+	background:rgba(255,255,255,0.7);
+	}
+	.loading i{
+	display:block;
+	margin-top:40%;
+	color:#ccc;
+	}
+	
+	.leader-board-info{
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	display:none;
+	}
+	.show{
+	display:block;
+	}
+	.rules{
+	height:80%;
+	width:80%;
+	overflow:auto;
+	left:0;
+	right:0;
+	margin: 0 auto;
+	margin-top:50px;
+	position:absolute;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg fill-opacity='0.03'%3E%3Ccircle fill='%23ffffff' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23f8d2c8' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23eba593' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23d97861' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23c34a31' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23a90000' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+transition:1s;
+	}
+	.rules li{
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+		}
+		.close{
+		width:60px;
+		height:30px;
+		background:#ccc;
+		color:#666;
+		font-weight:bold;
+		font-size:12px;
+		position:absolute;
+		display:block;
+		text-align:center;
+		padding-top:8px;
+		right:0;
+		bottom:0;
+		z-index:50;
+		margin-bottom:-5px;
+		margin-right:-5px;
+		opacity:1
+		}
+		.pickerG{
+		height:70px;
+		width:calc(384px / 6);
+		background-image:url('chracter-sprite.png');
+		/**background-position:center;
+		background-size:cover;**/
+		position:absolute;
+		bottom:0;
+		opacity:0;
+		margin-bottom:10px;
+		z-index:60;
+		}
+		.start-pickerG{
+		animation:animate 1s steps(6) infinite; 
+		}
+		.increase-pickerG{
+		animation:animate 0.7s steps(6) infinite; 
+		}
+		@keyframes animate{
+			from{
+			background-position:0;
+			}from{
+			background-position:-3072px;
+			}
+		}
+		.wrap-shield{
+		height:80px;
+		width:80px;
+		position:absolute;
+		bottom:0;
+		border-radius:50%;
+		background:rgba(255,255,255,0.4);
+		margin-left:10px;
+		z-index:3;
+		left:0;
+		opacity:0;
+		border:6px dotted #ff0;
+		animation: shield .3s infinite alternate;
+		}
+		.score-wrap{
+			height:40px;
+			width:40px;
+			position:absolute;
+			bottom:40;
+			border-radius:50%;
+			background:rgba(255,255,255,0.8);
+			margin-left:10px;
+			z-index:3;
+			left:0;
+			margin-left:50px;
+			opacity:0;
+			text-align:center;
+			color:green;
+			padding-top:7px;
+			font-weight:bold;
+		}
+		.minus{
+			color:red;
+		}
+		.stage-canvas{
+		height:100%;
+		width:100%;
+		position:absolute;
+		z-index:10;
+		}
+		
+		@keyframes shield{
+			0%,20%{
+			transform:rotate(30deg);
+			}40%,60%{
+			transform:scale(180deg);
+			}70%,100%{
+			transform:scale(360deg);
+			}
+		}
+		.enemy,.life,.shield{
+		height:40px;
+		width:40px;
+		border-radius:50%;
+		
+		position:absolute;
+		bottom:0;
+		left:20px;
+		margin-bottom:0px;
+		}
+		.enemy{
+			background-image:url('stone.png');
+			background-position:center;
+			background-size:cover;
+			animation:enemy 1s infinite alternate;
+		}
+		
+		@keyframes enemy{
+			0%,20%{
+			transform:rotate(45deg);
+			}50%,100%{
+			transform:scale(360deg);
+			}
+		}
+		.life{
+		padding-top:10px;
+		background:rgba(255,255,255,0.4);
+		text-align:center;
+		}
+		.shield{
+		background:rgba(255,255,255,0.4);
+		border:2px dotted #ff0;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		}
+		.shield i{
+			font-size:25px;
+			color:#ff0;
+		}
+		.enemy-box{
+		position:relative;
+		height:60%;
+		width:100%;
+		float:right;
+		background:rgba(0,0,0,0);
+		bottom:0;
+		margin-top:80px;
+		}
+		.gem{
+		height:40px;
+		width:40px;
+		background-position:center;
+		background-size:cover;
+		animation:enemy 1s infinite alternate;
+		border-radius:50%;
+		position:absolute;
+		bottom:0;
+		margin-bottom:10px;
+		}
+		.enemy-box-inner{
+		position:absolute;
+		background:rgba(255,255,255,0);
+		height:100%;
+		width:50px;
+		right:0;
+		}
+		.game-over,.winner{
+		color:#000;
+		text-align:center;
+		position:absolute;
+		z-index:7;
+		background:rgba(255,255,255,0.5);
+		top:0;
+		width:97%;
+		height:95%;
+		margin:10px 10px 0 0;
+		right:0;
+		z-index:-1;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+		}
+		.instruction{
+		background:rgba(0,0,0,0.6);
+		position:absolute;
+		top:0;
+		 width:90%;
+		min-height:40%;
+		 left:0;
+		 right:0;
+		margin:0 auto;
+		text-align:left;
+		 margin-top:40px;
+		 z-index:30;
+		 display:block;
+		 padding:10px 10px 20px 10px;
+		}
+		.list-group-item{
+		border:none;
+		font-size:12px;
+		border-bottom:1px solid #f1f1f1;
+		color:#fff;
+		padding:5px;
+		background:rgba(255,255,255,0);
+		}
+		h3,.game-over .warning{
+			color:#666;
+		}
+		.scores{
+		color:#000;
+		text-align:center;
+		position:absolute;
+		z-index:50;
+		background:rgba(255,255,255,0.5);
+		top:0;
+		right:0;
+		min-width:60px;
+		height:30px;
+		font-weight:bold;
+		margin:10px 90px 0 0;
+		color:#666;
+		padding:3px 5px 5px 5px;
+		}
+		
+		.stage{
+		height:150px;
+		width:100px;
+		background:#fff;
+		position:absolute;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		background:rgba(255,255,255,0.5);
+		border-radius:10px;
+		z-index:11;
+		}
+		.blocks{
+		float:left;
+		}
+		.parts, .stage p{
+		position:absolute;
+		}
+		.stage p{
+		padding:5px;
+		font-weight:bold;
+		color:#666;
+		}
+		.shield-message{
+		height:80px;
+		width:80px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		color:#ff0;
+		position:absolute;
+		bottom:0;
+		border-radius:50%;
+		background:rgba(255,255,255,0.4);
+		margin:0 auto;
+		z-index:20;
+		left:0;
+		right:0;
+		border:6px dotted #ff0;
+		margin-bottom:40%;
+		opacity:0;
+		animation: shieldtimer 1s infinite alternate;
+		}
+		.interaction-warning{
+		opacity:0;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		flex-direction:column;
+		position:absolute;
+		border:1px solid #ccc;
+		min-height:80px;
+		width:150px;
+		color:#666;
+		background:rgba(255,255,255,0.8);
+		border-radius:5px;
+		margin:0 auto;
+		z-index:20;
+		left:0;
+		right:0;
+		margin-top:20%;
+		padding:8px;
+		}
+		.warning-time{
+		padding-top:2px;
+			height:30px;
+			width:30px;
+			font-weight:bold;
+			border-radius:100%;
+			background:#fff;
+			text-align:center;
+			display:block;
+			animation: shieldtimer .5s infinite alternate;
+		}
+		.picker-message{
+		font-size:12px;
+		font-weight:normal;
+		}
+		@keyframes shieldtimer{
+			0%,20%{
+			transform:scale(1);
+			}50%,100%{
+			transform:scale(1.5);
+			}
+		}
+		.sand{
+		height:74px;
+		width:500%;
+		display:block;
+		background-image:url('road.png');
+		position:absolute;
+		bottom:0;
+		margin-bottom:-40px;
+		left:0;
+		right:0;
+		z-index:2;
+		background-repeat:repeat-x;
+		animation: road 5s linear infinite;
+		}
+		
+		@keyframes road{
+		 100%{
+		 transform:translateX(-1150px);
+		 }
+		}
+		
+		.city{
+		width:500%;
+		height:450px;
+		bottom:0;
+		left:0;
+		right:0;
+		display:block;
+		position:absolute;
+		background-image:url('1city.jpg');
+		z-index:1;
+		background-repeat:repeat-x;
+		animation: city 20s linear infinite;
+		}
+		@keyframes city{
+		 100%{
+		 transform:translateX(-450px);
+		 }
+		}
+		.sound,.time-change{
+			height:30px;
+			width:30px;
+			background:rgba(255,255,255,0.7);
+			color:#666;
+			border-radius:50%;
+			position:absolute;
+			top:0;
+			right:0;
+			margin:10px 10px 0 0;
+			z-index:50;
+			padding-top:5px;
+			font-size:20px;
+			text-align:center;
+		}
+		.sound{
+		margin:10px 50px 0 0;
+		}
+			.fa-shield-alt{
+		    color:#ff0;
+		}
+				.fa-gem{
+		    color:#0f0;
+		}
+		.stage-number{
+		margin:10px 0px 0px 5px;}
+		.btn-dark{
+		background:#ccc;
+		color:#fff;
+		border:none;
+		}
+		.next-stage{
+		display:none;
+		}
+		.refresh{
+		position:absolute;
+		bottom:0;
+		right:0;
+		margin:00 20px 20px 0;
+		}
+	</style>
+		<div class="container">
+			<div class="row mt-5">
+				<div class="col-sm-1 col-md-1 col-12"></div>
+				<div class="col-sm-10 col-md-10 col-12 canvas-wrap">
+				<div class="canvas">
+				<i class="fas fa-volume-up sound"></i>
+				<i class="far fa-moon time-change"></i>
+				<div class="shield-message"><p>20</p></div>
+				<div class="stage"></div>
+				<div class="interaction-warning">
+				<p class="picker-message">Picker got tired of waiting, timing out in</p>
+				<p class="warning-time">60</p>
+				</div>
+				<div class="instruction">
+				<span class="close">GOT IT</span>
+					<ul class="list-group">
+						<li class="list-group-item">Tap on the picker or press 'Space Bar' to jump and pick up the flying pieces to rebuild the CAN (10 points for each piece)</li>
+						<li class="list-group-item">Each piece you pick increase the flying speed of obstacles and pieces</li>
+						<li class="list-group-item">Picker gets tired of waiting without jumping after one minute</li>
+						<li class="list-group-item">Beware of look-alike pieces and avoid picking them in order to stop speed from increasing faster</li>
+						<li class="list-group-item">Pick a shield <i class="fas fa-shield-alt"></i> to protect your self from the obstacles</li>
+						<li class="list-group-item">Pick a gem <i class="fa fa-gem"></i> to reduce the flying speed of obstacles and pieces</li>
+					</ul>
+				</div>
+				<div class="game-over">
+				<h3></h3>
+				<p class="warning"></p>
+				<span class="btn btn-primary replay">Play again</span>
+				<a href="" class="btn btn-primary refresh"><i class="fa fa-redo"></i></a>
+				<div class="stage-numbers">
+
+				 </div>
+				</div>
+				<div class="scores">Score: <span>0</span></div>
+				<div class="winner">
+				 <h3></h3>
+				 <a href="" class="btn btn-primary refresh"><i class="fa fa-redo"></i></a>
+				 <span class="btn btn-primary play-again replay mb-2">Play again</span>
+				 <span class="btn btn-primary next-stage">Loading new stage...</span>
+				 <div class="stage-numbers">
+
+				 </div>
+				</div>
+				
+				<div class="stage-canvas">
+				<div class="pickerG"></div>
+				<div class="wrap-shield"></div>
+				<div class="score-wrap">+10</div>
+				<div class="enemy-box">
+				<!--<div class="enemy"></div>-->
+					<div class="enemy-box-inner">
+				
+					</div>
+				</div>
+				</div>
+				<div class="city"></div>
+				<div class="sand" class="animation: road 5s linear infinite;"></div>
+				
+				</div>
+				</div>
+				<div class="col-sm-1 col-md1 col-12"></div>
+			</div>
+			<p style="text-align:center; color:#666;">&copy; FORTHWEGO 2021</p>
+		</div>
+		
+		<script>
+		const stageMap = [{"extra":10, "sleeptime":100, "cities": ["1city.jpg-day","4city.jpg-night"],
+						   "deduction_time": 5, "pieces":16, "extrapoint":100},{"extra":10, "sleeptime":100,
+						   "cities": ["1city.jpg-day","4city.jpg-night"],"deduction_time": 4, "pieces":22, "extrapoint":150}];
+		let stageId = localStorage.getItem("stage")!=null ? localStorage.getItem("stage") : 0;
+		let level = Number(stageId);
+		let shieldCount=0;
+		let start=0;
+		let extra = stageMap[level].extra;
+		let wind = new Audio("hurricane.MP3");
+		wind.preload=true;
+		let gameMusic = new Audio("game_sound_file.MP3");
+		gameMusic.preload=true;
+		let pickedSound = new Audio("picked_sound.mp3");
+		pickedSound.preload=true;
+		let failedSound = new Audio("failsound.mp3");
+		failedSound.preload=true;
+		let pieces = stageMap[level].pieces;
+		let isWarning=false;
+		let thereIsShield = false;
+		let muteSound = true;
+		let stillWindy=true;
+		let position = 0;
+		let isGameOver = false;
+		let collidedSuccess= false;
+		let sleepTime = stageMap[level].sleeptime;
+		let checkTime;
+		let cities=stageMap[level].cities;
+		let cIndex=0;
+		let gotLife=0;
+		let score=localStorage.getItem("picker_score")!=null ? localStorage.getItem("picker_score") : 0;
+		score=Number(score);
+		let roadSpeed=5;
+		let maxLevel=1;
+		let characterSpeed=1.3;
+		let hasJumped= false;
+		let newStage=false;
+		let jumpSpeed=20;
+		let levelsPlayed = localStorage.getItem("played")!=null ? localStorage.getItem("played") : [0];
+		let timeToreduce=stageMap[level].deduction_time;
+		let collisionDetect,generateLifeBonus,warningTimeCounter,
+		cardNum=0;
+		const stage = document.querySelector(".stage");
+		document.querySelector(".scores span").innerHTML=score;
+		
+		for(let b=0; b<=maxLevel; b++){
+				document.querySelectorAll(".stage-numbers").forEach((stg)=>{
+				let stageBox = document.createElement("span");
+				stageBox.classList.add("btn");
+				levelsPlayed.indexOf(b)!=-1 ? stageBox.classList.add("btn-primary") : stageBox.classList.add("btn-dark");
+				stageBox.classList.add("stage-number");
+				stageBox.innerHTML=b+1;
+				stageBox.dataset.dataStageNumber=b;
+				stg.appendChild(stageBox);
+				});		
+		}
+		let card = buildArray(pieces,level);
+		const sleep = (time) =>{
+		return new Promise(resolve => setTimeout(resolve,time));
+		}
+		
+		const instructionClose = document.querySelector(".close");
+		const instruction = document.querySelector(".instruction");
+		let gameSoundControl = document.querySelector(".sound");
+		let timeMode = document.querySelector(".time-change");
+		const stageHeight = stage.offsetHeight;
+		const stageWidth = stage.offsetWidth;
+		
+		
+		let alreadyMute = localStorage.getItem('sound');
+		alreadyMute = alreadyMute==null ? "up" : localStorage.getItem('sound');
+		alreadyMute==null && localStorage.setItem('sound','up');
+		let alreadyTimeMode = localStorage.getItem('time-mode')==null ? "day" : localStorage.getItem('time-mode');
+		muteSound =  alreadyMute=="up"  ? true : false;
+		gameSoundControl.classList.remove("fa-volume-up", "fa-volume-mute");
+		gameSoundControl.classList.add("fa-volume-"+alreadyMute);
+		let tmIndex = alreadyTimeMode=="day"  ? 0 : 1;
+		document.querySelector(".city").style="background-image:url("+cities[tmIndex].split("-")[0]+");";
+		document.querySelector("body").classList.remove('body-day','body-night');
+		document.querySelector("body").classList.add('body-'+cities[tmIndex].split("-")[1]);
+		timeMode.classList.remove("fas","far");
+		let icon = alreadyTimeMode=="day"  ? 'far' : 'fas';
+		timeMode.classList.add(icon);
+		
+		function buildBlocks(n){
+		let num=0;
+		let blockWidth=stageWidth/n;
+		let blockHeight=stageHeight/n;
+		let rows=stageWidth/blockWidth;
+		let colums=stageHeight/blockHeight;
+		const blocks = [];
+		for(let i=0; i<colums; i++){
+		for(let j=0; j<rows; j++){
+		let block = document.createElement('div');
+		block.innerHTML=num;
+		block.style.width=blockWidth;
+		block.style.height=blockHeight;
+		block.style.backgroundColor='#0a9000';
+		let bl='blk'+num;
+		blocks[num]=num;
+		block.classList.add(bl,"blocks");
+		stage.appendChild(block);
+		cardNum=num;
+		num++;
+		}
+		}
+		return blocks;
+		}
+		
+		function secondsGone(){
+		return new Date().getMinutes()*60 + new Date().getSeconds() + (new Date().getHours() * 60 * 60);
+		}
+		
+		function buildArray(n,s){
+		const blocks = [];
+		for(let i=0; i<n; i++){
+		blocks[i]=i;
+		let broken = document.createElement("img");
+		broken.src='stage_'+s+'/broken_'+i+".png";
+		broken.classList.add("parts");
+		stage.appendChild(broken);
+		cardNum=i;
+		}
+		return blocks;
+		}
+		
+		async function splitChunks(n,canvasWidth){
+		const parts = document.querySelectorAll(".parts");
+		muteSound && wind.play();
+		for(let i=n-1; i>=0; i--){
+		await sleep(100);
+			for(let u=0; u<=canvasWidth+100; u+=50){
+			await sleep(20);
+			let randPos = Math.floor(Math.random() * 8);
+			let chunkMarginArray = [20,40,80,10,60,150,200,170,10];
+			parts[i].style.left=u+"px";
+			parts[i].style.top=chunkMarginArray[randPos]+"px";
+			if(u>=canvasWidth) parts[i].remove();
+			}
+			if(i==0){
+			stillWindy=false;
+			setTimeout(()=>{
+			wind.pause();
+			wind.currentTime=0;
+			muteSound && gameMusic.play();
+			gameMusic.loop=true;
+			startGame();
+			checkCollisionDetect();
+			},1000);
+			}
+		}
+		}
+		
+		timeMode.addEventListener('click',(e)=>{
+		if(e.target.classList.contains("fas")){
+		tmIndex=0;
+		timeMode=false;
+		localStorage.setItem('time-mode','day');
+		e.target.classList.replace("fas","far");
+		}else{
+		tmIndex=1;
+		muteSound=false;
+		localStorage.setItem('time-mode','night');
+		e.target.classList.replace("far","fas");
+		}
+		document.querySelector(".city").style="background-image:url("+cities[tmIndex].split("-")[0]+");";
+		document.querySelector("body").classList.remove('body-day','body-night');
+		document.querySelector("body").classList.add('body-'+cities[tmIndex].split("-")[1]);
+		});
+		
+		gameSoundControl.addEventListener('click',(e)=>{
+		if(e.target.classList.contains("fa-volume-up")){
+		gameMusic.pause();
+		muteSound=false;
+		localStorage.setItem('sound','mute');
+		e.target.classList.replace("fa-volume-up","fa-volume-mute");
+		}else{
+		!stillWindy && gameMusic.play();
+		stillWindy && wind.play();
+		localStorage.setItem('sound','up');
+		muteSound=true;
+		e.target.classList.replace("fa-volume-mute","fa-volume-up");
+		}
+		});
+		
+		const canvas = document.querySelector(".stage-canvas");
+		const canvasWidth = document.querySelector(".stage-canvas").offsetWidth;
+		const pickerG = document.querySelector(".pickerG");
+		const enemiesBox = document.querySelector(".enemy-box");
+		const enemiesBoxTop = enemiesBox.offsetTop;
+		
+		let enemyBoxOffsetBottom = enemiesBox.offsetTop;
+		
+		instructionClose.addEventListener("click",()=>{
+			instruction.style="opacity:0; transition:.8s";
+			setTimeout(()=>{
+			splitChunks(pieces,canvasWidth);
+		},1000);
+		});
+		
+		const piecesInView =[];
+		const createEnemy = async(extra,level,pieces)=>{
+		let obstaclePosition=canvasWidth;
+		let gemPosition=canvasWidth+100;
+		 let switchMargin = Math.floor(Math.random() * 6);
+		 let cardLen = card.length-1;
+		 let num = Math.floor(Math.random() * cardLen);
+		 if(switchMargin==3){
+		   obstaclePosition=canvasWidth+100;
+		   num = Math.floor(Math.random() * cardLen) + extra;
+		   gemPosition=canvasWidth;
+		 }else if(switchMargin==4){
+		   obstaclePosition=canvasWidth+80;
+		   gemPosition=canvasWidth+50;
+		   num = Math.floor(Math.random() * cardLen) + extra;
+		 }else if(switchMargin==2){
+		 num = Math.floor(Math.random() * cardLen) + extra;
+		   obstaclePosition=canvasWidth+40;
+		   gemPosition=canvasWidth+90;
+		 }
+		
+		
+		  let enemy = document.createElement('div');
+		  let gem = document.createElement('div');
+			
+		  if(!isGameOver) enemy.classList.add("enemy");
+		  if(!isGameOver) gem.classList.add("gem");
+		  
+		  let enemyAxis= deployEnemies("enemy");
+		  let gemyAxis= deployEnemies("gem");
+		   enemy.style.left= obstaclePosition+"px";
+		   enemy.style.bottom= enemyAxis+"px";
+		   card[num]!=undefined ? gem.dataset.dataNumber=card[num] : gem.dataset.dataNumber=num;
+		   let chunk = document.createElement("img");
+		   if(card.indexOf(card[num])!=-1 && piecesInView.indexOf(card[num])==-1){
+		   gem.classList.add("piece"+card[num]);
+		   piecesInView.push(card[num]);
+		   chunk.src='stage_'+level+'/chunk_'+card[num]+".png";
+		   }else{
+		   num = Math.floor(Math.random() * pieces) + extra;
+		   chunk.src='stage_'+level+'/chunk_'+num+".png";
+		   }
+		   gem.appendChild(chunk);
+		   gem.style.left= gemPosition+"px";
+		   gem.style.bottom= gemyAxis+"px";
+		   enemiesBox.appendChild(enemy);
+		  canvas.appendChild(gem);
+		 let timeArray = [10,20,18,30,25,5,28,32,42];
+		 let randTime = Math.floor(Math.random() * 8);
+		 randTime=timeArray[randTime]
+		 let len = obstaclePosition/10;
+		 let i=0;
+		 let enemyInterval = setInterval(()=>{
+		 obstaclePosition-=10;
+		 gemPosition-=10;
+		enemy.style.left=obstaclePosition;
+		gem.style.left=gemPosition;
+		
+		if(obstaclePosition<=0 || gemPosition<=0){
+			i=0;
+			obstaclePosition==500;
+			gemPosition==600;
+		}
+		if(i==randTime && !isGameOver){
+		 createEnemy(extra,level,pieces);
+		 }
+		 
+		 if(isGameOver || newStage){
+		clearInterval(enemyInterval);
+		reCreateStage();
+		 }
+		 i++;
+		 },sleepTime);
+	
+		}
+		
+		const createBonus = async(type)=>{
+		let elementPosition=canvasWidth+50;
+		  let element = document.createElement('div');
+		   if(!isGameOver) element.classList.add(type);
+		   element.innerHTML=type=='life' ? '<i class="fa fa-gem"></i>' : '<i class="fas fa-shield-alt"></i>';
+		   enemiesBox.appendChild(element);
+		    let lifeyAxis= deployEnemies(type);
+		   element.style.left= elementPosition+"px";
+		   element.style.bottom= lifeyAxis+"px";
+		 
+		 let len = elementPosition/10;
+		 let i=0;
+		 setInterval(()=>{
+		 elementPosition-=10;
+		 element.style.left=elementPosition
+		 i++
+		 },sleepTime+20);
+		}
+		
+		const startGame = ()=>{
+		createEnemy(extra,level,pieces);
+		jumpSpeed=20;
+		if(localStorage.getItem("played")!=null){
+		 levelsPlayed = localStorage.getItem("played");
+		 levelsPlayed=JSON.parse(levelsPlayed);
+		}else{
+		localStorage.setItem("played",JSON.stringify(levelsPlayed));
+		}
+		
+		localStorage.setItem('current_played',level)
+		if(levelsPlayed.indexOf(level)==-1){
+		try{
+			levelsPlayed.push(level);
+			}catch(error){
+			console.log(error);
+			}
+			localStorage.setItem("played",JSON.stringify(levelsPlayed));
+		}
+		let minAtload = secondsGone();
+		localStorage.setItem('time',minAtload);
+		checkTimeWarning();
+		gameMusic.volume=1;
+		pickerG.classList.add("start-pickerG");
+		pickerG.style.opacity=1;
+		generateLifeBonus =  setInterval(()=>{
+		let bonusRand = Math.floor(Math.random() *  20);
+		 if(bonusRand>=18 && sleepTime<=50){
+		 createBonus("life");
+		 }
+		
+		 if(bonusRand==10  && !thereIsShield){
+		 createBonus("shield");
+		 thereIsShield=false
+		 }
+		},3000);
+		}
+		
+		function detectCollision(enemyMove,type,level=''){
+			let collide=false;
+			let collideNum=-3;
+			enemyMove.forEach((move)=>{
+			 let enemyTop=move.offsetTop;
+			 let enemyPosition=enemyTop+move.getBoundingClientRect().height+enemiesBoxTop;
+			 if(type=="gem"){
+			 enemyPosition=enemyTop+move.getBoundingClientRect().height;
+			 }
+			 let enemyToLeft=window.getComputedStyle(move).left.replace("px","");
+			 enemyToLeft=Number(enemyToLeft);
+			 let closeEnemyAndPlayer= enemyPosition - pickerG.offsetTop;
+			 if((closeEnemyAndPlayer>=1 && closeEnemyAndPlayer<=59)){
+				if(((type=="enemy" && shieldCount==0)|| type=="shield")&& enemyToLeft<=40){
+				collide=true;
+				}
+				
+				if(type=="life" && enemyToLeft<=40){
+				move.style.opacity=0;
+				collide=true;
+				}
+				
+				if(type=="gem" && enemyToLeft<=40){
+				move.style.opacity=0;
+				move.style.bottom="500px";
+				collide=true;
+				collideNum=move.dataset.dataNumber;
+				}
+			}
+				 
+				 if(enemyToLeft<0){
+				 type=="enemy" || type=="life" || type=="shield" ? enemiesBox.removeChild(move) : canvas.removeChild(move);
+				 }
+				 if(enemyToLeft<0 && type=="gem"){
+				 let moveNumber = move.dataset.dataNumber;
+					piecesInView.splice(piecesInView.indexOf(piecesInView[moveNumber]),1);
+				 }
+				});
+		let result={"collide":collide, "num":collideNum, "level":level}
+		return result;
+		}
+		
+	function checkCollisionDetect(){
+	collisionDetect = setInterval(()=>{
+	  const enemyMove = document.querySelectorAll(".enemy");
+	  const gemMove = document.querySelectorAll(".gem");
+	  const lifeMove = document.querySelectorAll(".life");
+	  const shieldMove = document.querySelectorAll(".shield");
+	  let enemyCollision = detectCollision(enemyMove,"enemy");
+	  let gemCollision = detectCollision(gemMove,"gem",level);
+	  let lifeCollision = detectCollision(lifeMove,"life");
+	  let shieldCollision = detectCollision(shieldMove,"shield");
+	  if(enemyCollision.collide){
+	  gameMusic.volume=0.2;
+		document.querySelector(".game-over h3").innerHTML="Game over";
+		document.querySelector(".game-over p").innerHTML="";
+		document.querySelector(".game-over").style.zIndex="100";
+		muteSound && failedSound.play();
+		isGameOver=true;
+			reCreateStage();
+			clearInterval(collisionDetect);
+			clearInterval(generateLifeBonus);
+			clearInterval(checkTime);
+			document.querySelector(".shield-message").style.opacity=0;
+	  }
+	   
+	  if(gemCollision.collide && !collidedSuccess){
+	  if(sleepTime>25){
+		sleepTime-=timeToreduce;;
+		roadSpeed=roadSpeed-0.15;
+		//console.log(roadSpeed);
+		document.querySelector(".sand").style="animation:road "+roadSpeed+"s linear infinite;";
+		}
+		
+		if(sleepTime<=30){
+		document.querySelector(".pickerG").classList.replace("start-pickerG","increase-pickerG");
+		}
+		
+		let selected = Number(gemCollision.num);
+		
+		if(card.indexOf(selected)!=-1){
+		score+=10;
+		document.querySelector(".score-wrap").classList.remove("minus");
+		document.querySelector(".score-wrap").innerHTML="+10";
+		document.querySelector(".score-wrap").style.opacity=1;
+		localStorage.setItem("picker_score",score);
+		
+		let broken = document.createElement("img");
+		broken.src='stage_'+gemCollision.level+'/broken_'+gemCollision.num+".png";
+		broken.classList.add("parts");
+		document.querySelector(".stage").appendChild(broken);
+		muteSound && pickedSound.play();
+		card.splice(card.indexOf(selected),1);
+		}else{
+		 score-=5;
+		 document.querySelector(".score-wrap").classList.add("minus");
+		 document.querySelector(".score-wrap").innerHTML="-5";
+		 document.querySelector(".score-wrap").style.opacity=1;
+		 }
+		 document.querySelector(".scores span").innerHTML=score;
+		 setTimeout(()=>{
+		 document.querySelector(".score-wrap").style.opacity=0;
+		 document.querySelector(".score-wrap").innerHTML="";
+		 },200);
+		collidedSuccess=true;
+		
+		if(card.length==0){
+		score+=stageMap[level].extrapoint;
+		localStorage.setItem("picker_score",score);
+		document.querySelector(".scores span").innerHTML=score;
+		if(level<maxLevel && levelsPlayed.indexOf(level+1)==-1 ){
+		gameMusic.volume=0.2;
+		reCreateStage()
+		if(levelsPlayed.indexOf(level+1)==-1){
+		document.querySelector(".next-stage").style.display='block';
+		document.querySelector(".next-stage").innerHTML="Loading next level...";
+		}
+		clearInterval(collisionDetect);
+		document.querySelector(".winner").style.zIndex="100";
+		document.querySelector(".winner h3").innerHTML="Yeah!!!!!!";
+		document.querySelector(".shield-message").style.opacity=0;
+		document.querySelector(".wrap-shield").style.opacity=0;
+		document.querySelector(".game-over  .stage-numbers").style.display="none";
+		document.querySelector(".winner .stage-numbers").style.display="none";
+		setTimeout(()=>{
+		level++;
+		document.querySelectorAll(".game-over  .stage-number")[level].classList.replace("btn-dark","btn-primary");
+		document.querySelectorAll(".winner .stage-number")[level].classList.replace("btn-dark","btn-primary");
+		localStorage.setItem('stage',level);
+		stage.innerHTML="";
+		shieldCount=0;
+		start=0;
+		extra= stageMap[level].extra;
+		sleepTime=stageMap[level].sleeptime;
+		pieces = stageMap[level].pieces;
+		isWarning=false;
+		thereIsShield = false;
+		stillWindy=true;
+		position = 0;
+		isGameOver = false;
+		collidedSuccess= false;
+		card = buildArray(pieces,level);
+		cIndex=0;
+		gotLife=0;
+		roadSpeed=5;
+		characterSpeed=1.3;
+		hasJumped= false;
+		newStage=true;
+		timeToreduce=stageMap[level].deduction_time;
+		cardNum=0;
+		pickerG.classList.remove("start-pickerG");
+		pickerG.classList.remove("increase-pickerG");
+		document.querySelector(".sand").style="animation:road "+roadSpeed+"s linear infinite;";
+		pickerG.style.opacity=0;
+		let nextLevel = level+1;
+		document.querySelector(".game-over  .stage-numbers").style.display="block";
+		document.querySelector(".winner .stage-numbers").style.display="block";
+		if(levelsPlayed.indexOf(level)==-1){
+		document.querySelector(".next-stage").style.display='block';
+		document.querySelector(".next-stage").innerHTML="Start Level "+nextLevel;
+		}
+		},1000);
+		}else{
+		gameMusic.volume=0.2;
+		isGameOver=true;
+		newStage=false;
+			reCreateStage();
+			document.querySelector(".winner").style.zIndex="100";
+			document.querySelector(".winner h3").innerHTML="Yeah!!!!!!";
+			document.querySelector(".shield-message").style.opacity=0;
+			document.querySelector(".next-stage").style.display='none';
+			if(document.querySelector(".wrap-shield")!=null) document.querySelector(".wrap-shield").style.opacity=0;
+			document.querySelector(".play-again").style.opacity=1;
+		}
+		clearInterval(collisionDetect);
+		clearInterval(generateLifeBonus);
+		clearInterval(checkTime);
+		}
+	  }
+	  if(gotLife>1){
+	  gotLife=0;
+	  }
+	  if(lifeCollision.collide && !collidedSuccess && gotLife==0){
+	  sleepTime+=10;
+	  roadSpeed=roadSpeed+0.3;
+	  pickerG.classList.replace("increase-pickerG","start-pickerG");
+	  gotLife++;
+	  collidedSuccess=true;
+	  }
+	  
+	  if(shieldCollision.collide){
+	  shieldCount=1;
+	  thereIsShield=true;
+	  shieldTimer();
+		document.querySelector(".wrap-shield").style.opacity=1;
+		document.querySelector(".shield-message").style.opacity=1;
+		setTimeout(()=>{
+				if(document.querySelector(".shield-message")!=null)
+				document.querySelector(".shield-message").style.opacity=0;
+		},19000);
+		setTimeout(()=>{
+				if(document.querySelector(".wrap-shield")!=null)
+				document.querySelector(".wrap-shield").style.opacity=0;
+				shieldCount=0;
+		},20000);
+	  }
+	 
+	},10);
+	}
+	
+	const shieldTimer = () =>{
+		let shieltime = 20;
+		let shilderTimeCounter = setInterval(()=>{
+		shieltime--;
+		document.querySelector(".shield-message p").innerHTML=shieltime;
+		if(shieltime==0){
+		clearInterval(shilderTimeCounter);
+		document.querySelector(".shield-message p").innerHTML=20;
+		}
+		},1000);
+	}
+	
+	const NoActionTimeOut = () =>{
+		let warningTime = 60;
+		warningTimeCounter = setInterval(()=>{
+		warningTime--;
+		document.querySelector(".warning-time").innerHTML=warningTime;
+		if(warningTime==0) 
+		{
+		clearInterval(warningTimeCounter);
+		document.querySelector(".warning-time").innerHTML=60;
+		document.querySelector(".interaction-warning").style.opacity=0;
+		}
+		},1000);
+	}
+		function deployEnemies(type){
+		 let timeArray = type=="enemy" ? [10,50,70,150,200,110] : [200,250,300,150,130,220];
+		 if(type=="life"){
+		 timeArray = [40,90,100,120,160,140]
+		 }
+		 if(type=="shield"){
+		 timeArray = [40,60,100,130,90,140]
+		 }
+		 let randTime = Math.floor(Math.random() * 5);
+		randTime=timeArray[randTime];
+		return randTime;
+		}
+		
+	
+		document.querySelector(".next-stage").addEventListener("click",()=>{
+			if(newStage){
+			newStage=false;
+			document.querySelector(".winner").style.zIndex="-1";
+			splitChunks(pieces,canvasWidth);
+			document.querySelector(".next-stage").style.display='none';
+			}
+		});
+		
+		document.querySelector(".canvas").addEventListener("click",(e)=>{
+			if(e.target.classList.contains("stage-number") || e.target.classList.contains("replay")){
+			level=e.target.dataset.dataStageNumber!==undefined ? e.target.dataset.dataStageNumber : localStorage.getItem('current_played');
+			
+			let levelReached=localStorage.getItem('played');
+			level = Number(level);
+
+			if(levelReached.indexOf(level)!=-1 || levelReached==null){
+			document.querySelector(".game-over").style.zIndex=-1;
+			document.querySelector(".winner").style.zIndex=-1;
+			localStorage.setItem('stage',level);
+			stage.innerHTML="";
+			shieldCount=0;
+			start=0;
+			extra= stageMap[level].extra;
+			sleepTime=stageMap[level].sleeptime;
+			pieces = stageMap[level].pieces;
+			isWarning=false;
+			thereIsShield = false;
+			stillWindy=true;
+			position = 0;
+			isGameOver = false;
+			collidedSuccess= false;
+			card = buildArray(pieces,level);
+			cIndex=0;
+			gotLife=0;
+			roadSpeed=5;
+			characterSpeed=1.3;
+			hasJumped= false;
+			newStage=false;
+			timeToreduce=stageMap[level].deduction_time;
+			cardNum=0;
+			pickerG.classList.remove("increase-pickerG");
+			document.querySelector(".sand").style="animation:road "+roadSpeed+"s linear infinite;";
+			setTimeout(()=>{
+				document.querySelector(".winner").style.zIndex="-1";
+				splitChunks(pieces,canvasWidth);
+				document.querySelector(".next-stage").style.display='none';
+			},1000);
+		}
+		}
+		});
+		
+		
+		let gravity=.9;
+		async function jump(e,jumpSpeed){
+		isWarning=false;
+		clearInterval(warningTimeCounter);
+		document.querySelector(".warning-time").innerHTML=60;
+		document.querySelector(".interaction-warning").style.opacity=0;
+		const pickerG = document.querySelector(".pickerG");
+		const shield = document.querySelector(".wrap-shield");
+		const scoreWrap = document.querySelector(".score-wrap");
+		let count=0;
+		
+		for(let j=0; j<16; j++){
+		await sleep(jumpSpeed);
+		//move down
+		if(count==15){
+		
+		collidedSuccess=false;
+	
+		for(let d=0; d<17; d++){
+		await sleep(jumpSpeed);
+		
+			if(count == 0){
+				
+				hasJumped= false;
+			}
+			position -=5;
+			count--;
+			
+			position=count<=0 ? 0  : position*gravity;
+			pickerG.style.bottom=position+"px";
+			shield.style.bottom=position+"px";
+			scoreWrap.style.bottom=position+40+"px";
+			}
+		
+		
+		}
+		//move up
+		  position +=30;
+		  count++;
+		  position=count<=0 ? 0  : position*gravity;;
+		   pickerG.style.bottom=position+"px";
+		   shield.style.bottom=position+"px";
+		   scoreWrap.style.bottom=position+40+"px";
+		}
+		}
+		
+		canvas.addEventListener('click',function(e){
+		localStorage.setItem('time',secondsGone());
+		if(e.target.classList.contains("pickerG") || e.target.parentElement.classList.contains("canvas")  && !hasJumped){
+		if(sleepTime<40){
+		jumpSpeed=jumpSpeed-0.25;
+		}
+		jump(e,jumpSpeed);
+		}
+		});
+		
+		
+		
+		function checkTimeWarning(){
+		checkTime = setInterval(()=>{
+		let saveMinAtload = localStorage.getItem('time');
+		let currentTime =secondsGone();
+		if(currentTime - saveMinAtload == 60 && !isWarning){
+		isWarning=true;
+		document.querySelector(".interaction-warning").style.opacity=1;
+		NoActionTimeOut();
+		}
+		if(currentTime - saveMinAtload > 120){
+				gameMusic.volume=0.2;
+				isGameOver = true;
+				document.querySelector(".game-over h3").innerHTML="Game over";
+				document.querySelector(".game-over p").innerHTML="Picker got tired of waiting";
+				document.querySelector(".game-over").style.zIndex="100";
+				muteSound && failedSound.play();
+				reCreateStage()
+				clearInterval(collisionDetect);
+				clearInterval(generateLifeBonus);
+				clearInterval(checkTime);
+		}
+		},500);
+		}
+		
+		function clearStage(element,parent){
+		element = document.querySelectorAll("."+element)!=null ? document.querySelectorAll("."+element) : null;
+		if(element!=null){ 
+		try{
+		element.forEach((child)=>{
+			if(child!=null) parent.removeChild(child);		
+		});
+		}catch(error){
+		console.log(error);
+		}
+		}
+		}
+		function reCreateStage(){
+			clearStage("enemy",enemiesBox);
+			clearStage("gem",canvas);
+			clearStage("life",canvas);
+			clearStage("shield",enemiesBox);
+			document.querySelector(".pickerG").style.opacity=0;
+			document.querySelector(".shield-message").style.opacity=0;
+			document.querySelector(".wrap-shield").style.opacity=0;
+			document.querySelector(".pickerG").classList.remove("start-pickerG");
+		}
+		
+		document.addEventListener("keyup",(e)=>{
+			if((e.keyCode==32 || e.code=='Space') && !hasJumped){
+			localStorage.setItem('time',secondsGone());
+			if(sleepTime<40){
+			jumpSpeed=jumpSpeed-0.25;
+			}
+			jump(e,jumpSpeed);
+			}
+		});
+		</script>
+	</body>
+</html>
